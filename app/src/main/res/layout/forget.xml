@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/register_title"
+        android:layout_width="match_parent"
+        android:background="#00C5CD"
+        android:layout_height="50dp">
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/register_title"
+        android:id="@+id/register_border"
+        android:layout_margin="20dp"
+        android:background="#00C5CD"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+        <TextView
+            android:layout_marginTop="46dp"
+            android:text="龙子湖市场信息平台"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <EditText
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/register_border"
+        android:id="@+id/forgot_email"
+        android:hint="注册邮箱"
+        android:lines="1"
+        android:inputType="textEmailAddress"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center_horizontal"
+        android:textColor="#00C5CD"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/forgot_email"
+        android:layout_alignTop="@+id/register_user"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/email" />
+    <Button
+        android:layout_below="@id/forgot_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/but1"
+        android:id="@+id/forgot_to"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <ProgressBar
+        android:id="@+id/fp"
+        android:layout_below="@id/forgot_to"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

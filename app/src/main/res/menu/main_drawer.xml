@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/tiao"
+            android:icon="@drawable/tiao"
+            android:title="跳骚市场" />
+        <item
+            android:id="@+id/xin"
+            android:icon="@drawable/xin"
+            android:title="新品市场" />
+        <item
+            android:id="@+id/salr"
+            android:icon="@drawable/sal"
+            android:title="我要卖东西" />
+        <item
+            android:id="@+id/news"
+            android:icon="@drawable/news"
+            android:title="大学新鲜事" />
+        <item
+            android:id="@+id/wo_fa"
+            android:icon="@drawable/fabu"
+            android:title="发布新鲜事" />
+
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/setting"
+            android:title="我的设置" />
+
+    </group>
+
+    <item android:title="大学社区">
+        <menu>
+            <item
+                android:id="@+id/bai"
+                android:icon="@drawable/biao"
+                android:title="表白墙" />
+            <item
+                android:id="@+id/shi"
+                android:icon="@drawable/shi"
+                android:title="失物招领" />
+            <item
+                android:id="@+id/fan"
+                android:icon="@drawable/fan"
+                android:title="新建议" />
+        </menu>
+    </item>
+
+</menu>

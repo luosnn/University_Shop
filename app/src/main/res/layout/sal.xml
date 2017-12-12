@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/title"
+        android:background="#00C5CD"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/title_salback"
+            android:background="@drawable/back"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/sal_2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/title"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="商品名称："
+            android:textSize="20dp"/>
+        <EditText
+            android:id="@+id/goods_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入商品名称"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/sal_3"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/sal_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/sal_decs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商品描述："
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/goods_desc"
+        android:layout_below="@id/sal_3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请描述该商品"/>
+
+    <LinearLayout
+        android:id="@+id/fabu_price"
+        android:layout_below="@id/goods_desc"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="商品价格："
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"/>
+        <EditText
+            android:id="@+id/goods_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入商品价格(元)"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/lianxi"
+        android:text="联系电话 : "
+        android:layout_marginLeft="30dp"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/fabu_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="请输入联系电话"
+        android:inputType="number"
+        android:lines="1"
+        android:id="@+id/mynumm"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@id/lianxi"
+        android:layout_below="@id/fabu_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/add"
+        android:text="货源地址 : "
+        android:layout_marginLeft="30dp"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/lianxi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="请输入货源地址"
+        android:lines="1"
+        android:layout_alignBaseline="@id/add"
+        android:id="@+id/adder"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@id/add"
+        android:layout_below="@id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_below="@id/adder"
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:visibility="visible"
+        android:src="@drawable/pro"
+        android:layout_gravity="center"/>
+    <Button
+        android:layout_margin="30dp"
+        android:background="@drawable/butp"
+        android:id="@+id/select_photo"
+        android:textSize="12sp"
+        android:layout_below="@id/picture"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="从相册中选择图片"/>
+
+    <Button
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/picture"
+        android:background="@drawable/butp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/goods_add"
+        android:textSize="12sp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="上架到跳骚市场"/>
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/goods_add"
+        android:background="@drawable/butp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/goods_add_new"
+        android:textSize="12sp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="上架到新品市场"/>
+
+</RelativeLayout>

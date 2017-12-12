@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/register_title"
+        android:layout_width="match_parent"
+        android:background="#00C5CD"
+        android:layout_height="50dp">
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/register_title"
+        android:id="@+id/register_border"
+        android:layout_margin="20dp"
+        android:background="#00C5CD"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+        <TextView
+            android:layout_marginTop="46dp"
+            android:text="龙子湖市场信息平台"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <EditText
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/register_border"
+        android:id="@+id/register_user"
+        android:hint="手机"
+        android:lines="1"
+        android:inputType="number"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center_horizontal"
+        android:textColor="#00C5CD"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/register_user"
+        android:layout_alignTop="@+id/register_user"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/user"
+        android:id="@+id/use_img" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:id="@+id/register_pass_img"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/use_img"
+        android:layout_below="@+id/register_email"
+        android:src="@drawable/password" />
+
+    <EditText
+        android:id="@+id/register_email"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:lines="1"
+        android:inputType="textEmailAddress"
+        android:textSize="14sp"
+        android:hint="邮箱"
+        android:textColor="#00C5CD"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/register_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/register_password"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="14sp"
+        android:hint="密码"
+        android:lines="1"
+        android:inputType="textPassword"
+        android:layout_below="@id/register_email"
+        android:textColor="#00C5CD"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/use_img"
+        android:layout_below="@+id/register_user"
+        android:src="@drawable/email" />
+
+    <Button
+        android:id="@+id/register"
+        android:background="@drawable/but1"
+        android:layout_below="@id/register_password"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <ProgressBar
+        android:id="@+id/register_program"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/register"/>
+
+</RelativeLayout>
