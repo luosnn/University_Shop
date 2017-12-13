@@ -38,7 +38,6 @@ public class News extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product);
         listView = findViewById(R.id.lv);
-        back();
         imageView =  findViewById(R.id.product_img);
         listView = findViewById(R.id.lv);
         BmobQuery<Goods_New> bmobQuery = new BmobQuery<Goods_New>();
@@ -68,14 +67,15 @@ public class News extends Activity {
         });
 
     }
-    public void back(){
+    /*public void back(){
         backk = findViewById(R.id.title_pback);
         backk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(News.this,Main.class));
+                finish();
             }
         });
     }
-//--------------------------------------
+//--------------------------------------*/
 }

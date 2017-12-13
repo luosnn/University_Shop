@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:layout_width="match_parent"
         android:id="@+id/title"
         android:background="#00C5CD"
@@ -13,7 +13,7 @@
             android:background="@drawable/back"
             android:layout_width="38dp"
             android:layout_height="wrap_content" />
-    </RelativeLayout>
+    </RelativeLayout>-->
 
     <LinearLayout
         android:id="@+id/sal_2"
@@ -122,12 +122,13 @@
         android:layout_height="wrap_content" />
 
     <ImageView
+        android:layout_marginTop="30dp"
         android:layout_below="@id/adder"
         android:id="@+id/picture"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:visibility="visible"
-        android:src="@drawable/pro"
+        android:src="@drawable/prodct_png"
         android:layout_gravity="center"/>
     <Button
         android:layout_margin="30dp"

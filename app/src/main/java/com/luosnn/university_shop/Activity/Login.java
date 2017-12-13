@@ -77,7 +77,7 @@ public class Login extends Activity implements View.OnClickListener{
                 break;
             case   R.id.login_to_login:
                 p1.setVisibility(View.VISIBLE);
-                String s1 = euser.getText().toString().trim();
+               final String s1 = euser.getText().toString().trim();
                 String s2 = epass.getText().toString().trim();
                 if (s1 == null || s2 == null ) {
                     p1.setVisibility(View.INVISIBLE);
@@ -109,8 +109,9 @@ public class Login extends Activity implements View.OnClickListener{
                         public void done(MyUser myUser, BmobException e) {
                             if (e==null){
                                 p1.setVisibility(View.INVISIBLE);
-
-                                startActivity(new Intent(Login.this,Main.class));
+                                Intent intent = new Intent(Login.this,Main.class);
+                                intent.putExtra("ID",s1);
+                                startActivity(intent);
                                 finish();
 
                             }else {

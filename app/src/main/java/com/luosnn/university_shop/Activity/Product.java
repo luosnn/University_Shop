@@ -47,10 +47,11 @@ public class Product extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product);
         listView = findViewById(R.id.lv);
-        back();
+
         imageView =  findViewById(R.id.product_img);
         listView = findViewById(R.id.lv);
         BmobQuery<Goods> bmobQuery = new BmobQuery<Goods>();
+
         bmobQuery.findObjects(new FindListener<Goods>() {  //按行查询，查到的数据放到List<Goods>的集合
             @Override
             public void done(List<Goods> list, BmobException e) {
@@ -77,16 +78,18 @@ public class Product extends Activity {
         });
 
     }
-    public void back(){
+    /*public void back(){
         backk = findViewById(R.id.title_pback);
         backk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Product.this,Main.class));
+                finish();
+
             }
         });
     }
-//---------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------*/
 
             }
 

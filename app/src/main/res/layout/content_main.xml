@@ -10,13 +10,5 @@
     tools:showIn="@layout/app_bar_main">
 
 
-    <RelativeLayout
-        android:id="@+id/main_bottom"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-    </RelativeLayout>
-
 
 </RelativeLayout>

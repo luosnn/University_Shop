@@ -52,19 +52,21 @@ public class Sal extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.sal);
-        backsal();
+
         findView();
         initListener();
     }
-    public void backsal(){
+   /* public void backsal(){
         backk = findViewById(R.id.title_salback);
         backk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Sal.this,Main.class));
+                finish();
+
             }
         });
-    }
+    }*/
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode){

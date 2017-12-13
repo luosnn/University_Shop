@@ -23,15 +23,17 @@ public class FaBu extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.fabu);
-        backbu();
+
     }
-    public void backbu(){
+   /* public void backbu(){
         backk = findViewById(R.id.title_fabuback);
         backk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(FaBu.this,Main.class));
+                finish();
+
             }
         });
-    }
+    }*/
 }

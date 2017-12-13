@@ -31,6 +31,7 @@ public class Wen extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Wen.this,Main.class));
+finish();
             }
         });
     }

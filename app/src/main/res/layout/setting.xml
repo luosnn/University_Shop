@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+  <!--  <RelativeLayout
         android:layout_width="match_parent"
         android:id="@+id/title"
         android:background="#00C5CD"
@@ -13,6 +13,115 @@
             android:background="@drawable/back"
             android:layout_width="38dp"
             android:layout_height="wrap_content" />
-    </RelativeLayout>
+    </RelativeLayout>-->
+
+    <ImageView
+        android:layout_marginTop="80dp"
+        android:id="@+id/SETpicture"
+        android:layout_width="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="100dp"
+        android:visibility="visible"
+        android:src="@drawable/prodct_png"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/select_SETphoto"
+        android:layout_width="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/SETpicture"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/set" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/select_SETphoto"
+        android:layout_marginTop="10dp"
+        android:text="相册选择" />
+
+
+
+    <Button
+        android:id="@+id/goods_SETadd"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/s5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/set"
+        android:textSize="12sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/goods_SETadd"
+        android:text="确定头像" />
+    <EditText
+        android:id="@+id/s1"
+        android:background="@drawable/kuang"
+        android:layout_width="120dp"
+        android:lines="1"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:hint="昵称"
+        android:gravity="center_horizontal"
+        android:paddingTop="3dp"
+        android:layout_below="@id/select_SETphoto"
+        android:layout_height="30dp" />
+    <EditText
+        android:id="@+id/s2"
+        android:background="@drawable/kuang"
+        android:layout_width="120dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:hint="性别"
+        android:lines="1"
+        android:gravity="center_horizontal"
+        android:paddingTop="3dp"
+        android:layout_below="@id/s1"
+        android:layout_height="30dp" />
+    <EditText
+        android:id="@+id/s3"
+        android:background="@drawable/kuang"
+        android:layout_width="120dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:hint="年龄"
+        android:gravity="center_horizontal"
+        android:paddingTop="3dp"
+        android:lines="1"
+        android:inputType="number"
+        android:layout_below="@id/s2"
+        android:layout_height="30dp" />
+    <EditText
+        android:id="@+id/s4"
+        android:background="@drawable/kuang"
+        android:layout_width="180dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:hint="电话"
+        android:lines="1"
+        android:inputType="number"
+        android:gravity="center_horizontal"
+        android:paddingTop="3dp"
+        android:layout_below="@id/s3"
+        android:layout_height="30dp" />
+    <EditText
+        android:id="@+id/s5"
+       android:lines="1"
+        android:background="@drawable/kuang"
+        android:layout_width="180dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:hint="学校"
+        android:gravity="center_horizontal"
+        android:paddingTop="3dp"
+        android:layout_below="@id/s4"
+        android:layout_height="30dp" />
 
 </RelativeLayout>

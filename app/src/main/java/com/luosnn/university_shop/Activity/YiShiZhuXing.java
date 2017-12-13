@@ -31,6 +31,8 @@ public class YiShiZhuXing extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(YiShiZhuXing.this,Main.class));
+                finish();
+
             }
         });
     }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:layout_width="match_parent"
         android:id="@+id/title"
         android:background="#00C5CD"
@@ -14,6 +14,6 @@
             android:background="@drawable/back"
             android:layout_width="38dp"
             android:layout_height="wrap_content" />
-    </RelativeLayout>
+    </RelativeLayout>-->
 
 </RelativeLayout>

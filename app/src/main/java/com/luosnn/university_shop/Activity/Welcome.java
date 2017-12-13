@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import com.luosnn.university_shop.R;
 
 import cn.bmob.v3.Bmob;
+import cn.bmob.v3.update.BmobUpdateAgent;
 
 /**
  * Created by 罗什什 on 2017/12/11.
@@ -30,6 +31,9 @@ public class Welcome extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.welcome);
         Bmob.initialize(this, "df878b162b32277b6a91bb0aba1adb07");
+        BmobUpdateAgent.initAppVersion();
+        BmobUpdateAgent.update(this);
+        BmobUpdateAgent.setUpdateOnlyWifi(false);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {

@@ -31,6 +31,8 @@ public class Shi extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Shi.this,Main.class));
+                finish();
+
             }
         });
     }

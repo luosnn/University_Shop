@@ -3,15 +3,11 @@ package com.luosnn.university_shop.Activity;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -21,19 +17,38 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.luosnn.university_shop.File.UserInfo;
 import com.luosnn.university_shop.R;
+
+import cn.bmob.push.BmobPush;
+import cn.bmob.v3.Bmob;
+import cn.bmob.v3.BmobInstallation;
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.QueryListener;
 
 public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+
+        Bmob.initialize(this, "df878b162b32277b6a91bb0aba1adb07");
+        // 使用推送服务时的初始化操作
+        BmobInstallation.getCurrentInstallation().save();
+        // 启动推送服务
+        BmobPush.startWork(this);
         look();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -43,6 +58,8 @@ public class Main extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Main.this,YiShiZhuXing.class));
+                overridePendingTransition(R.anim.leftin, R.anim.leftout);
+
             }
         });
 
@@ -96,24 +113,42 @@ public class Main extends AppCompatActivity
 
         if (id == R.id.tiao) {
             startActivity(new Intent(this,Product.class));
+            overridePendingTransition(R.anim.leftin, R.anim.leftout);
+
         } else if (id == R.id.xin) {
 
             startActivity(new Intent(this,News.class));
+            overridePendingTransition(R.anim.leftin, R.anim.leftout);
+
         } else if (id == R.id.news) {
             startActivity(new Intent(this,Wen.class));
+            overridePendingTransition(R.anim.leftin, R.anim.leftout);
+
         } else if (id == R.id.setting) {
             startActivity(new Intent(this,Setting.class));
+            overridePendingTransition(R.anim.leftin, R.anim.leftout);
+
         } else if (id == R.id.bai) {
             startActivity(new Intent(this,Biao.class));
+            overridePendingTransition(R.anim.leftin, R.anim.leftin);
+
         } else if (id == R.id.shi) {
             startActivity(new Intent(this,Shi.class));
+            overridePendingTransition(R.anim.leftin, R.anim.leftout);
+
         }else if (id == R.id.fan){
-            startActivity(new Intent(this,Fan.class));
+            startActivity(new Intent(this,Jian.class));
+            overridePendingTransition(R.anim.leftin, R.anim.leftout);
+
         }
         else if (id == R.id.salr){
             startActivity(new Intent(this,Sal.class));
+            overridePendingTransition(R.anim.leftin, R.anim.leftout);
+
         }else if (id == R.id.wo_fa){
             startActivity(new Intent(this,FaBu.class));
+            overridePendingTransition(R.anim.leftin, R.anim.leftout);
+
         }
 
 
